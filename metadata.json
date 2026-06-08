@@ -1,0 +1,6 @@
+{
+  "name": "VisuALL",
+  "description": "Soluções criativas e estratégicas para destacar sua marca, conectar com seu público e aumentar suas vendas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
