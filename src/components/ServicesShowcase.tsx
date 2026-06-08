@@ -296,7 +296,7 @@ export default function ServicesShowcase() {
                     >
                       <div className="w-20 h-20 bg-slate-950 border border-slate-800 rounded-lg overflow-hidden flex items-center justify-center relative shrink-0">
                         <img 
-                          src="/cookie_normal.jpg" 
+                          src="./cookie_normal.jpg" 
                           alt="Anúncio normal de cookie"
                           className="w-full h-full object-cover filter brightness-90 saturate-75"
                           referrerPolicy="no-referrer"
@@ -328,7 +328,7 @@ export default function ServicesShowcase() {
                       
                       <div className="w-20 h-20 bg-slate-950 border border-cyan-500/50 rounded-lg overflow-hidden flex items-center justify-center relative shrink-0 shadow-lg shadow-cyan-500/10">
                         <img 
-                          src="/cookie_melhorado.jpg" 
+                          src="./cookie_melhorado.jpg" 
                           alt="Anúncio otimizado pela VisuALL"
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
@@ -626,7 +626,7 @@ export default function ServicesShowcase() {
                 {/* 1. Behind Screen (Full colored fully restored version) */}
                 <div className="absolute inset-0 w-full h-full bg-slate-900">
                   <img 
-                    src="/restauracao_color.jpg" 
+                    src="./restauracao_color.jpg" 
                     alt="Foto restaurada e colorida"
                     className="w-full h-full object-cover select-none pointer-events-none"
                     referrerPolicy="no-referrer"
@@ -644,7 +644,7 @@ export default function ServicesShowcase() {
                 >
                   <div className="absolute inset-y-0 left-0 h-full" style={{ width: sliderWidth }}>
                     <img 
-                      src="/restauracao_bw.jpg" 
+                      src="./restauracao_bw.jpg" 
                       alt="Foto antiga em preto e branco"
                       className="absolute inset-0 h-full object-cover select-none pointer-events-none max-w-none"
                       style={{ width: sliderWidth }}
