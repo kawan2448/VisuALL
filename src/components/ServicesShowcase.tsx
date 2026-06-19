@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { cookieNormal, cookieMelhorado, restauracaoColor, restauracaoBw } from '../imagesBase64';
 import { 
   ShoppingBag, 
   Instagram, 
@@ -296,8 +297,8 @@ export default function ServicesShowcase() {
                     >
                       <div className="w-20 h-20 bg-slate-950 border border-slate-800 rounded-lg overflow-hidden flex items-center justify-center relative shrink-0">
                         <img 
-                          src="./cookie_normal.jpg" 
-                          alt="Anúncio normal de cookie"
+                          src={cookieNormal} 
+                          alt="Anúncio amador comum"
                           className="w-full h-full object-cover filter brightness-90 saturate-75"
                           referrerPolicy="no-referrer"
                         />
@@ -307,8 +308,8 @@ export default function ServicesShowcase() {
                         <div className="flex gap-1 items-center mb-1">
                           <span className="bg-slate-800 text-slate-400 text-[8px] px-1 py-0.2 rounded font-bold font-mono">ANÚNCIO COMUM</span>
                         </div>
-                        <h4 className="text-[12px] font-bold text-slate-300 leading-tight font-sans">Arte Amadora & Sem Destaque</h4>
-                        <p className="text-[8px] text-slate-500 mt-1 leading-snug">Imagens sem brilho e texto genérico passam despercebidos pelo feed de vendas.</p>
+                        <h4 className="text-[12px] font-bold text-slate-300 leading-tight font-sans">Iluminação Sem Foco & Pouco Brilho</h4>
+                        <p className="text-[8px] text-slate-500 mt-1 leading-snug">Imagens caseiras com iluminação inadequada passam despercebidas nos feeds de vendas mais concorridos.</p>
                         <div className="flex items-center gap-1.5 mt-2 text-[8px] font-mono text-red-500 font-bold uppercase tracking-wider">
                           <span>Média Conversão (1.2% CTR)</span>
                         </div>
@@ -328,8 +329,8 @@ export default function ServicesShowcase() {
                       
                       <div className="w-20 h-20 bg-slate-950 border border-cyan-500/50 rounded-lg overflow-hidden flex items-center justify-center relative shrink-0 shadow-lg shadow-cyan-500/10">
                         <img 
-                          src="./cookie_melhorado.jpg" 
-                          alt="Anúncio otimizado pela VisuALL"
+                          src={cookieMelhorado} 
+                          alt="Anúncio Premium Otimizado"
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
                         />
@@ -339,11 +340,11 @@ export default function ServicesShowcase() {
                       {/* Details of the ad */}
                       <div className="flex-1 flex flex-col justify-center">
                         <div className="flex gap-1.5 mb-1 items-center">
-                          <span className="bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-[8px] px-1 py-0.2 rounded font-bold font-mono">DESIGN PREMIUM</span>
+                          <span className="bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-[8px] px-1 py-0.2 rounded font-bold font-mono">CONVERTE +</span>
                           <span className="bg-emerald-400 text-slate-950 text-[7px] font-extrabold px-1 rounded">ALTO CTR</span>
                         </div>
-                        <h4 className="text-[12px] font-extrabold text-white leading-tight font-sans tracking-tight">Anúncio de Cookie Profissional!</h4>
-                        <p className="text-[8px] text-slate-300 mt-1 leading-snug">Cores vibrantes, contraste focado no produto e design persuasivo para engajamento imediato.</p>
+                        <h4 className="text-[12px] font-extrabold text-white leading-tight font-sans tracking-tight">Design Otimizado & Criativo!</h4>
+                        <p className="text-[8px] text-slate-300 mt-1 leading-snug">Criativos marcantes que utilizam inteligência de design estratégico, tratamento profissional e excelente apelo visual.</p>
                         
                         <div className="flex items-center gap-1.5 mt-2">
                           <div className="flex -space-x-1">
@@ -626,7 +627,7 @@ export default function ServicesShowcase() {
                 {/* 1. Behind Screen (Full colored fully restored version) */}
                 <div className="absolute inset-0 w-full h-full bg-slate-900">
                   <img 
-                    src="./restauracao_color.jpg" 
+                    src={restauracaoColor} 
                     alt="Foto restaurada e colorida"
                     className="w-full h-full object-cover select-none pointer-events-none"
                     referrerPolicy="no-referrer"
@@ -644,7 +645,7 @@ export default function ServicesShowcase() {
                 >
                   <div className="absolute inset-y-0 left-0 h-full" style={{ width: sliderWidth }}>
                     <img 
-                      src="./restauracao_bw.jpg" 
+                      src={restauracaoBw} 
                       alt="Foto antiga em preto e branco"
                       className="absolute inset-0 h-full object-cover select-none pointer-events-none max-w-none"
                       style={{ width: sliderWidth }}

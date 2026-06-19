@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { logoVisuall } from '../imagesBase64';
 
 interface LogoProps {
   className?: string;
@@ -18,7 +19,7 @@ export default function Logo({ className = "h-24 w-24", showText = true, pulse =
       >
         <div className={`w-full h-full rounded-2xl overflow-hidden border border-cyan-500/30 bg-slate-950/80 p-1 flex items-center justify-center shadow-lg shadow-cyan-500/10 ${pulse ? 'shadow-[0_0_20px_rgba(6,182,212,0.3)] animate-pulse' : ''}`}>
           <img 
-            src="./logo_visuall.jpg" 
+            src={logoVisuall} 
             alt="VisuALL Logo" 
             className="w-full h-full object-contain rounded-xl"
             referrerPolicy="no-referrer"
