@@ -21,6 +21,7 @@ import {
 import Logo from './components/Logo';
 import ServicesShowcase from './components/ServicesShowcase';
 import BudgetCalculator from './components/BudgetCalculator';
+import FAQSection from './components/FAQSection';
 import ContactForm from './components/ContactForm';
 import QuickContact from './components/QuickContact';
 
@@ -90,6 +91,12 @@ export default function App() {
               Simulador
             </button>
             <button 
+              onClick={() => handleScrollTo('faq')} 
+              className="hover:text-white px-2 py-1 rounded transition-all cursor-pointer"
+            >
+              FAQ
+            </button>
+            <button 
               onClick={() => handleScrollTo('contato')} 
               className="hover:text-white px-2 py-1 rounded transition-all cursor-pointer"
             >
@@ -140,6 +147,12 @@ export default function App() {
                   className="text-left py-2 hover:text-cyan-400 border-b border-slate-900/40"
                 >
                   Simulador de Orçamento
+                </button>
+                <button 
+                  onClick={() => handleScrollTo('faq')} 
+                  className="text-left py-2 hover:text-cyan-400 border-b border-slate-900/40"
+                >
+                  Perguntas Frequentes (FAQ)
                 </button>
                 <button 
                   onClick={() => handleScrollTo('contato')} 
@@ -262,6 +275,9 @@ export default function App() {
       {/* INTERACTIVE BUDGET CALCULATOR */}
       <BudgetCalculator />
 
+      {/* FREQUENTLY ASKED QUESTIONS */}
+      <FAQSection />
+
       {/* CORE IDENTITY PILLARS (Infographic Bottom Element) */}
       <section className="py-20 px-4 md:px-8 bg-slate-950 border-t border-slate-900 overflow-hidden relative">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-sky-950/10 rounded-full blur-[110px]" />
@@ -353,6 +369,7 @@ export default function App() {
             <div className="flex gap-4 text-xs font-semibold text-slate-500 font-sans">
               <button onClick={() => handleScrollTo('servicos')} className="hover:text-slate-350 cursor-pointer">Serviços</button>
               <button onClick={() => handleScrollTo('calculadora')} className="hover:text-slate-350 cursor-pointer">Orçamento</button>
+              <button onClick={() => handleScrollTo('faq')} className="hover:text-slate-350 cursor-pointer">FAQ</button>
               <button onClick={() => handleScrollTo('contato')} className="hover:text-slate-350 cursor-pointer">Fale Conosco</button>
             </div>
 
