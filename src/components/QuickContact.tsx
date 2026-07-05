@@ -16,8 +16,29 @@ export default function QuickContact() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3 items-end">
-        {/* Main Floating Action Button: Glowing Instagram Gradient */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3.5 items-end">
+        {/* WhatsApp Floating Action Button: Glowing Emerald Gradient */}
+        <motion.a
+          href={`https://wa.me/5514981976861?text=${encodeURIComponent(messageTemplate)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative w-14 h-14 bg-gradient-to-tr from-emerald-500 via-emerald-600 to-green-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-emerald-950/40 cursor-pointer group hover:scale-110 transition-all border border-emerald-400/30"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          {/* Pulsing ring indicator */}
+          <span className="absolute inset-0 rounded-full bg-emerald-400 opacity-25 animate-ping animate-duration-2000" />
+
+          {/* Icon */}
+          <MessageCircle className="w-7 h-7 text-white fill-white stroke-none" />
+
+          <span className="absolute right-16 bg-slate-900 border border-slate-800 text-white text-[10px] font-bold font-sans px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 whitespace-nowrap select-none">
+            Chamar no WhatsApp 🟢
+          </span>
+        </motion.a>
+
+        {/* Instagram Floating Action Button: Glowing Instagram Gradient */}
         <motion.button
           onClick={() => setIsOpen(true)}
           className="relative w-14 h-14 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-purple-950/40 cursor-pointer group hover:scale-110 transition-all border border-pink-400/30"
@@ -32,7 +53,7 @@ export default function QuickContact() {
           <Instagram className="w-6.5 h-6.5 text-white" />
 
           <span className="absolute right-16 bg-slate-900 border border-slate-800 text-white text-[10px] font-bold font-sans px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-2 group-hover:translate-x-0 whitespace-nowrap select-none">
-            Fale Conosco no Instagram 💬
+            Opções de Contato Direct 📸
           </span>
         </motion.button>
       </div>
@@ -79,7 +100,7 @@ export default function QuickContact() {
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed font-sans mb-4">
-                Nossos canais de atendimento estão no Instagram! Nós preparamos uma mensagem perfeita para facilitar o seu contato. É só copiar abaixo e nos enviar no Instagram. 😊
+                Nossos canais de atendimento estão disponíveis no <strong>Instagram</strong> e no <strong>WhatsApp</strong>! Preparamos uma mensagem perfeita para facilitar o seu contato. É só copiar abaixo e escolher o canal que preferir. 😊
               </p>
 
               {/* Message Display Area */}
@@ -112,26 +133,40 @@ export default function QuickContact() {
                 </button>
               </div>
 
-              {/* CTA Navigation button */}
-              <a
-                href="https://instagram.com/visuall.mediaa"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  if (!copied) {
-                    // Automatically copy if they forgot
-                    navigator.clipboard.writeText(messageTemplate);
-                    setCopied(true);
-                  }
-                }}
-                className="w-full py-3 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 hover:opacity-95 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-purple-500/10 flex items-center justify-center gap-2 transition-all"
-              >
-                <MessageCircle className="w-4 h-4 fill-white stroke-none" />
-                {copied ? 'Abrir Instagram e Colar 📸' : 'Copiar e Abrir Instagram 📸'}
-              </a>
+              {/* CTA Navigation buttons */}
+              <div className="flex flex-col gap-2.5">
+                {/* WhatsApp button */}
+                <a
+                  href={`https://wa.me/5514981976861?text=${encodeURIComponent(messageTemplate)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-450 hover:to-green-650 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-emerald-500/10 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                >
+                  <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                  Chamar no WhatsApp 🟢
+                </a>
+
+                {/* Instagram button */}
+                <a
+                  href="https://instagram.com/visuall.mediaa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (!copied) {
+                      // Automatically copy if they forgot
+                      navigator.clipboard.writeText(messageTemplate);
+                      setCopied(true);
+                    }
+                  }}
+                  className="w-full py-3 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 hover:opacity-95 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-purple-500/10 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                >
+                  <Instagram className="w-4 h-4 text-white" />
+                  {copied ? 'Abrir Instagram e Colar 📸' : 'Copiar e Abrir Instagram 📸'}
+                </a>
+              </div>
 
               <p className="text-[9px] text-slate-500 text-center leading-relaxed mt-3">
-                Ao clicar, você será direcionado para o Direct da <strong>@visuall.mediaa</strong>. Basta colar a mensagem enviada à área de transferência!
+                No WhatsApp, a conversa se inicia instantaneamente. No Instagram, basta colar a mensagem copiada na DM da <strong>@visuall.mediaa</strong>!
               </p>
             </motion.div>
           </div>

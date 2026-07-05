@@ -1001,12 +1001,12 @@ Olá equipe VisuALL! Criei esse escopo personalizado no simulador do site de voc
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Instagram className="h-4 w-4" />
-                  Gerar Orçamento no Instagram
+                  <Calculator className="h-4 w-4" />
+                  Simular e Enviar Orçamento
                 </motion.button>
 
                 <p className="text-[9px] text-slate-500 text-center leading-relaxed">
-                  Gera uma mensagem estruturada perfeita para copiar e enviar via Direct para a VisuALL.
+                  Gera uma mensagem de orçamento estruturada para você enviar via WhatsApp Comercial ou Direct no Instagram.
                 </p>
               </form>
 
@@ -1053,12 +1053,12 @@ Olá equipe VisuALL! Criei esse escopo personalizado no simulador do site de voc
                 </div>
                 <div>
                   <h3 className="text-base font-black text-white font-sans leading-none">Orçamento Pronto para Enviar!</h3>
-                  <span className="text-[9px] text-amber-400 font-mono uppercase tracking-widest font-bold">COPIAR E ENVIAR NO DIRECT</span>
+                  <span className="text-[9px] text-amber-400 font-mono uppercase tracking-widest font-bold">FALE COM A NOSSA EQUIPE</span>
                 </div>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed font-sans mb-4">
-                Nós estruturamos um resumo impecável baseado no seu escopo simulado. Copie o texto abaixo e nos envie por Direct no Instagram. 😊
+                Nós estruturamos um resumo impecável baseado no seu escopo simulado. Escolha abaixo como prefere nos enviar a mensagem. 😊
               </p>
 
               {/* Dynamic Compiled Text displaying formatted details */}
@@ -1091,25 +1091,39 @@ Olá equipe VisuALL! Criei esse escopo personalizado no simulador do site de voc
                 </button>
               </div>
 
-              {/* CTA button to visit profile */}
-              <a
-                href="https://instagram.com/visuall.mediaa"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  if (!copied) {
-                    navigator.clipboard.writeText(compiledMessage);
-                    setCopied(true);
-                  }
-                }}
-                className="w-full py-3 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 hover:opacity-95 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-purple-500/10 flex items-center justify-center gap-2 transition-all"
-              >
-                <Instagram className="w-4 h-4 text-white" />
-                {copied ? 'Abrir Instagram e Enviar DM 📸' : 'Copiar e Abrir Instagram 📸'}
-              </a>
+              {/* Action buttons */}
+              <div className="flex flex-col gap-2.5">
+                {/* Send via WhatsApp */}
+                <a
+                  href={`https://wa.me/5514981976861?text=${encodeURIComponent(compiledMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-450 hover:to-green-650 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-emerald-500/10 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                >
+                  <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+                  Enviar no WhatsApp Comercial 🟢
+                </a>
+
+                {/* Send via Instagram */}
+                <a
+                  href="https://instagram.com/visuall.mediaa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (!copied) {
+                      navigator.clipboard.writeText(compiledMessage);
+                      setCopied(true);
+                    }
+                  }}
+                  className="w-full py-3 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 hover:opacity-95 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-xl cursor-pointer shadow-lg shadow-purple-500/10 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.01]"
+                >
+                  <Instagram className="w-4 h-4 text-white" />
+                  {copied ? 'Abrir Instagram e Enviar DM 📸' : 'Copiar e Abrir Instagram 📸'}
+                </a>
+              </div>
 
               <p className="text-[9px] text-slate-500 text-center leading-relaxed mt-3">
-                Ao clicar, você visitará o perfil <strong>@visuall.mediaa</strong>. Basta colar a mensagem copiada e daremos início imediato ao seu atendimento!
+                No WhatsApp, a conversa se inicia e envia a mensagem na hora! No Instagram, basta colar a mensagem copiada na DM da <strong>@visuall.mediaa</strong>.
               </p>
             </motion.div>
           </div>

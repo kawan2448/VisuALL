@@ -86,13 +86,13 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
             <div className="flex flex-col gap-5 my-10 lg:my-0">
               
               <div className="flex items-center gap-4 bg-slate-900/40 p-4 border border-slate-900 rounded-xl hover:border-cyan-500/25 transition-all">
-                <div className="h-10 w-10 bg-cyan-950/40 border border-cyan-800/45 text-cyan-400 rounded-xl flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5" />
+                <div className="h-10 w-10 bg-emerald-950/45 border border-emerald-800/45 text-emerald-450 rounded-xl flex items-center justify-center shrink-0">
+                  <MessageCircle className="h-5 w-5 fill-emerald-450 stroke-none" />
                 </div>
                 <div className="text-left font-sans">
-                  <span className="text-[10px] text-slate-500 font-mono uppercase font-bold">Nosso Canal de Email</span>
-                  <a href="mailto:contato@visuallmedia.com.br" className="block text-sm font-bold text-slate-100 hover:text-cyan-400 transition-colors">
-                    contato@visuallmedia.com.br
+                  <span className="text-[10px] text-slate-500 font-mono uppercase font-bold">WhatsApp Comercial</span>
+                  <a href="https://wa.me/5514981976861" target="_blank" rel="noopener noreferrer" className="block text-sm font-bold text-slate-100 hover:text-emerald-400 transition-colors">
+                    (14) 98197-6861
                   </a>
                 </div>
               </div>
@@ -111,6 +111,18 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
 
               <div className="flex items-center gap-4 bg-slate-900/40 p-4 border border-slate-900 rounded-xl hover:border-cyan-500/25 transition-all">
                 <div className="h-10 w-10 bg-cyan-950/40 border border-cyan-800/45 text-cyan-400 rounded-xl flex items-center justify-center shrink-0">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div className="text-left font-sans">
+                  <span className="text-[10px] text-slate-500 font-mono uppercase font-bold">Nosso Canal de Email</span>
+                  <a href="mailto:contato@visuallmedia.com.br" className="block text-sm font-bold text-slate-100 hover:text-cyan-400 transition-colors">
+                    contato@visuallmedia.com.br
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 bg-slate-900/40 p-4 border border-slate-900 rounded-xl hover:border-cyan-500/25 transition-all">
+                <div className="h-10 w-10 bg-cyan-950/40 border border-cyan-800/45 text-cyan-400 rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div className="text-left font-sans">
@@ -122,7 +134,16 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
               </div>
 
               {/* Social Channels Row */}
-              <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center gap-3 flex-wrap mt-6">
+                <a 
+                  href="https://wa.me/5514981976861" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-4 py-2 bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900/70 text-slate-350 hover:text-white rounded-lg text-xs font-bold font-sans flex items-center gap-2 transition-all cursor-pointer"
+                >
+                  <MessageCircle className="w-4 h-4 text-emerald-500 fill-emerald-550 stroke-none" />
+                  Chamar no WhatsApp
+                </a>
                 <a 
                   href="https://instagram.com/visuall.mediaa" 
                   target="_blank" 
@@ -254,17 +275,17 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
                       className="bg-slate-900 border border-slate-800 rounded-2xl p-5 w-full max-w-md flex flex-col items-stretch gap-4 shadow-2xl relative overflow-y-auto max-h-[95%]"
                     >
                       <div className="flex items-center gap-2.5 pb-2 border-b border-white/5">
-                        <div className="h-8 w-8 bg-gradient-to-tr from-cyan-500 to-cyan-600 rounded-lg flex items-center justify-center text-slate-950 shadow-sm shrink-0">
-                          <Instagram className="h-4.5 w-4.5" />
+                        <div className="h-8 w-8 bg-gradient-to-tr from-cyan-500 to-indigo-600 rounded-lg flex items-center justify-center text-white shadow-sm shrink-0">
+                          <MessageCircle className="h-4.5 w-4.5 fill-white stroke-none" />
                         </div>
                         <div className="text-left">
-                          <h4 className="text-sm font-black text-white leading-none">Mensagem Pronta para o Instagram!</h4>
-                          <span className="text-[9px] text-cyan-400 font-mono uppercase tracking-widest font-bold">COPIAR E ENVIAR NO DIRECT</span>
+                          <h4 className="text-sm font-black text-white leading-none">Mensagem Pronta para Enviar!</h4>
+                          <span className="text-[9px] text-cyan-450 font-mono uppercase tracking-widest font-bold">FALE DIRETAMENTE COM A EQUIPE</span>
                         </div>
                       </div>
 
                       <p className="text-[11px] text-slate-400 text-left leading-relaxed">
-                        Nós estruturamos a sua mensagem de contato perfeitamente. Copie abaixo e nos envie por Direct no Instagram da VisuALL.
+                        Nós estruturamos a sua mensagem de contato perfeitamente. Copie e escolha o canal que prefere para iniciar o atendimento comercial com a VisuALL.
                       </p>
 
                       {/* Display the compiled message */}
@@ -290,7 +311,7 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
                         >
                           {copied ? (
                             <>
-                              <Check className="w-3w h-3 px-0.5 stroke-[3]" />
+                              <Check className="w-3 h-3 stroke-[3]" />
                               Copiado com Sucesso!
                             </>
                           ) : (
@@ -302,25 +323,39 @@ Olá equipe VisuALL! Enviei esse contato através do formulário do site e gosta
                         </button>
                       </div>
 
-                      {/* Direct button */}
-                      <a
-                        href="https://instagram.com/visuall.mediaa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => {
-                          if (!copied) {
-                            navigator.clipboard.writeText(compiledMessage);
-                            setCopied(true);
-                          }
-                        }}
-                        className="w-full py-2.5 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-lg cursor-pointer shadow-md flex items-center justify-center gap-2 transition-all hover:opacity-95"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 fill-white stroke-none" />
-                        {copied ? 'Abrir Instagram e Enviar DM 📸' : 'Copiar e Abrir Instagram 📸'}
-                      </a>
+                      {/* Direct channels */}
+                      <div className="flex flex-col gap-2">
+                        {/* WhatsApp button */}
+                        <a
+                          href={`https://wa.me/5514981976861?text=${encodeURIComponent(compiledMessage)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-lg cursor-pointer shadow-md flex items-center justify-center gap-2 transition-all hover:opacity-95 transform hover:scale-[1.01]"
+                        >
+                          <MessageCircle className="w-3.5 h-3.5 fill-white stroke-none" />
+                          Falar no WhatsApp Comercial 🟢
+                        </a>
+
+                        {/* Instagram button */}
+                        <a
+                          href="https://instagram.com/visuall.mediaa"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            if (!copied) {
+                              navigator.clipboard.writeText(compiledMessage);
+                              setCopied(true);
+                            }
+                          }}
+                          className="w-full py-2.5 px-4 bg-gradient-to-tr from-pink-500 via-purple-600 to-orange-500 text-white font-sans font-bold text-xs uppercase tracking-wider rounded-lg cursor-pointer shadow-md flex items-center justify-center gap-2 transition-all hover:opacity-95 transform hover:scale-[1.01]"
+                        >
+                          <Instagram className="w-3.5 h-3.5 text-white" />
+                          {copied ? 'Abrir Instagram e Enviar DM 📸' : 'Copiar e Abrir Instagram 📸'}
+                        </a>
+                      </div>
 
                       <div className="flex justify-between items-center border-t border-white/5 pt-2 mt-1">
-                        <span className="text-[9px] text-slate-500 font-mono">Basta colar no chat do Direct!</span>
+                        <span className="text-[9px] text-slate-500 font-mono">Chame no canal que preferir!</span>
                         <button
                           type="button"
                           onClick={() => setSubmitted(false)}
